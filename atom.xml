@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ozdimensional.github.io/</id>
     <title>OZD的摆烂窝</title>
-    <updated>2022-03-15T07:07:47.858Z</updated>
+    <updated>2022-03-15T07:13:24.563Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ozdimensional.github.io/"/>
     <link rel="self" href="https://ozdimensional.github.io/atom.xml"/>
@@ -11,12 +11,18 @@
     <icon>https://ozdimensional.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, OZD的摆烂窝</rights>
     <entry>
-        <title type="html"><![CDATA[摆烂]]></title>
+        <title type="html"><![CDATA[Hello World]]></title>
         <id>https://ozdimensional.github.io/post/bai-lan/</id>
         <link href="https://ozdimensional.github.io/post/bai-lan/">
         </link>
         <updated>2022-03-11T15:15:09.000Z</updated>
-        <content type="html"><![CDATA[<p>调半年</p>
+        <content type="html"><![CDATA[<p>#include <iostream></p>
+<p>using namespace std;</p>
+<p>int main()<br>
+{<br>
+cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; endl;<br>
+return 0;<br>
+}</p>
 ]]></content>
     </entry>
     <entry>
