@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSP 2021-12 | OZD的摆烂窝</title>
-<link rel="shortcut icon" href="https://ozdimensional.github.io//favicon.ico?v=1647329079073">
+<link rel="shortcut icon" href="https://ozdimensional.github.io//favicon.ico?v=1647332978334">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://ozdimensional.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="CSP 2021-12 | OZD的摆烂窝 - Atom Feed" href="https://ozdimensional.github.io//atom.xml">
@@ -12,7 +12,17 @@
 
 
     <meta name="description" content="题目一：
-" />
+
+水题
+从后往前遍历，每次加(i)*(a[i]-a[i-1])就可以完成。
+ac 代码：
+#include 
+using namespace std;
+int a[202];
+int main()
+{
+int n,N;
+cin&g..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -22,7 +32,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://ozdimensional.github.io/">
-  <img class="avatar" src="https://ozdimensional.github.io//images/avatar.png?v=1647329079073" alt="">
+  <img class="avatar" src="https://ozdimensional.github.io//images/avatar.png?v=1647332978334" alt="">
   </a>
   <h1 class="site-title">
     OZD的摆烂窝
@@ -89,7 +99,31 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>题目一：</p>
+                <p>题目一：<br>
+<img src="https://ozdimensional.github.io//post-images/1647332802761.png" alt="" loading="lazy"><br>
+水题<br>
+从后往前遍历，每次加(i)*(a[i]-a[i-1])就可以完成。<br>
+ac 代码：<br>
+#include <iostream></p>
+<p>using namespace std;<br>
+int a[202];<br>
+int main()<br>
+{<br>
+int n,N;<br>
+cin&gt;&gt;n&gt;&gt;N;<br>
+for(int i=0;i&lt;n;i++)<br>
+{<br>
+scanf(&quot; %d&quot;,&amp;a[i]);<br>
+}<br>
+int sum=0;<br>
+sum+=n*(N-a[n-1]);<br>
+for(int i=n-1;i&gt;0;i--)<br>
+{<br>
+sum+=(i)*(a[i]-a[i-1]);<br>
+}<br>
+cout&lt;&lt;sum&lt;&lt;endl;<br>
+return 0;<br>
+}</p>
 
               </div>
               <div class="toc-container">
