@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ozdimensional.github.io/</id>
     <title>OZD的摆烂窝</title>
-    <updated>2022-03-15T08:34:03.885Z</updated>
+    <updated>2022-03-21T01:22:43.490Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ozdimensional.github.io/"/>
     <link rel="self" href="https://ozdimensional.github.io/atom.xml"/>
@@ -10,6 +10,61 @@
     <logo>https://ozdimensional.github.io/images/avatar.png</logo>
     <icon>https://ozdimensional.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, OZD的摆烂窝</rights>
+    <entry>
+        <title type="html"><![CDATA[KMP]]></title>
+        <id>https://ozdimensional.github.io/post/kmp/</id>
+        <link href="https://ozdimensional.github.io/post/kmp/">
+        </link>
+        <updated>2022-03-21T00:00:01.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://ozdimensional.github.io//post-images/1647825647066.jpg" alt="" loading="lazy"><br>
+学习一下kmp<br>
+例题：<br>
+给定一个模式串 S，以及一个模板串 P，所有字符串中只包含大小写英文字母以及阿拉伯数字。<br>
+模板串 P 在模式串 S 中多次作为子串出现。<br>
+求出模板串 P 在模式串 S 中所有出现的位置的起始下标。</p>
+<p>输入格式<br>
+第一行输入整数 N，表示字符串 P 的长度。<br>
+第二行输入字符串 P。<br>
+第三行输入整数 M，表示字符串 S 的长度。<br>
+第四行输入字符串 S。</p>
+<p>输出格式<br>
+共一行，输出所有出现位置的起始下标（下标从 0 开始计数），整数之间用空格隔开。</p>
+<p>数据范围<br>
+1≤N≤10^5<br>
+1≤M≤10^6</p>
+<p>#include <iostream><br>
+using namespace std;<br>
+const int  M=100004;<br>
+int n,m;<br>
+string s,p;<br>
+int ne[M];<br>
+int main()<br>
+{<br>
+cin&gt;&gt;n&gt;&gt;p&gt;&gt;m&gt;&gt;s;<br>
+for (int i=1,j=0;i&lt;n;i++)<br>
+{<br>
+while(j &amp;&amp; p[i]!=p[j])<br>
+j=ne[j-1];<br>
+if(p[i]==p[j])<br>
+j++;<br>
+ne[i]=j;<br>
+}<br>
+int cnt=0;<br>
+for(int i=0,j=0;i&lt;m;i++)<br>
+{<br>
+while(j&amp;&amp;s[i]!=p[j])<br>
+j=ne[j-1];<br>
+if(s[i]<mark>p[j])j++;<br>
+if(j</mark>n)<br>
+{<br>
+j=ne[j-1];<br>
+cout&lt;&lt;i-n+1&lt;&lt;&quot; &quot;;<br>
+}<br>
+}<br>
+return 0;<br>
+}</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSP 2021-12]]></title>
         <id>https://ozdimensional.github.io/post/csp-2021-12/</id>
