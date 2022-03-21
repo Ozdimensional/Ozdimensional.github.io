@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>KMP | OZD的摆烂窝</title>
-<link rel="shortcut icon" href="https://ozdimensional.github.io//favicon.ico?v=1647825854610">
+<link rel="shortcut icon" href="https://ozdimensional.github.io//favicon.ico?v=1647825994797">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://ozdimensional.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="KMP | OZD的摆烂窝 - Atom Feed" href="https://ozdimensional.github.io//atom.xml">
@@ -28,7 +28,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://ozdimensional.github.io/">
-  <img class="avatar" src="https://ozdimensional.github.io//images/avatar.png?v=1647825854610" alt="">
+  <img class="avatar" src="https://ozdimensional.github.io//images/avatar.png?v=1647825994797" alt="">
   </a>
   <h1 class="site-title">
     OZD的摆烂窝
@@ -122,21 +122,22 @@ int main()<br>
 cin&gt;&gt;n&gt;&gt;p&gt;&gt;m&gt;&gt;s;<br>
 for (int i=1,j=0;i&lt;n;i++)<br>
 {<br>
-while(j &amp;&amp; p[i]!=p[j])<br>
-j=ne[j-1];<br>
-if(p[i]==p[j])<br>
+while( j  &amp;&amp;  p[i] != p[j] )<br>
+j = ne[j-1];<br>
+if( p[i] == p[j] )<br>
 j++;<br>
-ne[i]=j;<br>
+ne[i] = j;<br>
 }<br>
-int cnt=0;<br>
-for(int i=0,j=0;i&lt;m;i++)<br>
+int cnt = 0;<br>
+for( int i = 0 , j = 0 ; i &lt; m ; i ++ )<br>
 {<br>
-while(j&amp;&amp;s[i]!=p[j])<br>
-j=ne[j-1];<br>
-if(s[i]<mark>p[j])j++;<br>
-if(j</mark>n)<br>
+while( j &amp;&amp; s[i] != p[j] )<br>
+j = ne[j-1];<br>
+if( s[i] == p[j] )<br>
+j++;<br>
+if(  j == n)<br>
 {<br>
-j=ne[j-1];<br>
+j = ne[j-1];<br>
 cout&lt;&lt;i-n+1&lt;&lt;&quot; &quot;;<br>
 }<br>
 }<br>

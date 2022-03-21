@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ozdimensional.github.io/</id>
     <title>OZD的摆烂窝</title>
-    <updated>2022-03-21T01:24:16.507Z</updated>
+    <updated>2022-03-21T01:26:52.711Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ozdimensional.github.io/"/>
     <link rel="self" href="https://ozdimensional.github.io/atom.xml"/>
@@ -43,21 +43,22 @@ int main()<br>
 cin&gt;&gt;n&gt;&gt;p&gt;&gt;m&gt;&gt;s;<br>
 for (int i=1,j=0;i&lt;n;i++)<br>
 {<br>
-while(j &amp;&amp; p[i]!=p[j])<br>
-j=ne[j-1];<br>
-if(p[i]==p[j])<br>
+while( j  &amp;&amp;  p[i] != p[j] )<br>
+j = ne[j-1];<br>
+if( p[i] == p[j] )<br>
 j++;<br>
-ne[i]=j;<br>
+ne[i] = j;<br>
 }<br>
-int cnt=0;<br>
-for(int i=0,j=0;i&lt;m;i++)<br>
+int cnt = 0;<br>
+for( int i = 0 , j = 0 ; i &lt; m ; i ++ )<br>
 {<br>
-while(j&amp;&amp;s[i]!=p[j])<br>
-j=ne[j-1];<br>
-if(s[i]<mark>p[j])j++;<br>
-if(j</mark>n)<br>
+while( j &amp;&amp; s[i] != p[j] )<br>
+j = ne[j-1];<br>
+if( s[i] == p[j] )<br>
+j++;<br>
+if(  j == n)<br>
 {<br>
-j=ne[j-1];<br>
+j = ne[j-1];<br>
 cout&lt;&lt;i-n+1&lt;&lt;&quot; &quot;;<br>
 }<br>
 }<br>
