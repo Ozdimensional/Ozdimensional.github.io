@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ozdimensional.github.io/</id>
     <title>OZD的摆烂窝</title>
-    <updated>2022-03-21T01:26:52.711Z</updated>
+    <updated>2022-04-18T00:50:15.857Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ozdimensional.github.io/"/>
     <link rel="self" href="https://ozdimensional.github.io/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://ozdimensional.github.io/images/avatar.png</logo>
     <icon>https://ozdimensional.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, OZD的摆烂窝</rights>
+    <entry>
+        <title type="html"><![CDATA[最短路]]></title>
+        <id>https://ozdimensional.github.io/post/zui-duan-lu/</id>
+        <link href="https://ozdimensional.github.io/post/zui-duan-lu/">
+        </link>
+        <updated>2022-04-18T00:49:43.000Z</updated>
+        <content type="html"><![CDATA[<p>1、朴素dijkstra<br>
+#include &lt;bits/stdc++.h&gt;</p>
+<p>using namespace std;<br>
+int n,m;<br>
+int g[510][510];<br>
+int dist[510];<br>
+bool st[510];<br>
+int djkstra()<br>
+{<br>
+memset(dist,0x3f,sizeof(dist));<br>
+dist[1]=0;</p>
+<pre><code>for(int i=0;i&lt;n-1;i++)
+{
+    int t=-1;
+    for(int j=1;j&lt;=n;j++)
+    {
+        if(!st[j]&amp;&amp;(t==-1||dist[t]&gt;dist[j]))
+            t=j;
+    }
+    for(int j=1;j&lt;=n;j++)
+        dist[j]=min(dist[j],dist[t]+g[t][j]);
+    st[t]=true;
+}
+    if(dist[n]==0x3f3f3f3f) return -1;
+    return dist[n];
+</code></pre>
+<p>}<br>
+int main()<br>
+{</p>
+<pre><code>memset(g,0x3f,sizeof(g));
+cin&gt;&gt;n&gt;&gt;m;
+while(m--)
+{
+    int x,y,z;
+    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
+    g[x][y]=min(g[x][y],z);
+}
+int k=djkstra();
+cout&lt;&lt;k&lt;&lt;endl;
+return 0;
+</code></pre>
+<p>}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSP 2022-3-20日场次]]></title>
+        <id>https://ozdimensional.github.io/post/csp-2022-3-20-ri-chang-ci/</id>
+        <link href="https://ozdimensional.github.io/post/csp-2022-3-20-ri-chang-ci/">
+        </link>
+        <updated>2022-03-21T01:28:47.000Z</updated>
+        <content type="html"><![CDATA[<p>因为疫情直接取消了摆了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[KMP]]></title>
         <id>https://ozdimensional.github.io/post/kmp/</id>
