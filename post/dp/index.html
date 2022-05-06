@@ -2,18 +2,23 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>G | OZD的摆烂窝</title>
+<title>DP | OZD的摆烂窝</title>
 <link rel="shortcut icon" href="https://ozdimensional.github.io//favicon.ico?v=1651804711914">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://ozdimensional.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="G | OZD的摆烂窝 - Atom Feed" href="https://ozdimensional.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="DP | OZD的摆烂窝 - Atom Feed" href="https://ozdimensional.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="gg
-" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="1、01背包
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n,m,f[1002],v[1002],w[1002];
+int main()
+{
+cin&gt;&gt;n&gt..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,27 +80,54 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              G
+              DP
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2022-05-05
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
-              
-                <a href="https://ozdimensional.github.io/tag/3fwlRA_Yy/" class="post-tag">
-                  # Gridea
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://ozdimensional.github.io//post-images/hello-gridea.png" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>gg</p>
+                <p>1、01背包<br>
+#include &lt;bits/stdc++.h&gt;<br>
+using namespace std;<br>
+int n,m,f[1002],v[1002],w[1002];<br>
+int main()<br>
+{<br>
+cin&gt;&gt;n&gt;&gt;m;<br>
+for(int i=1;i&lt;=n;i++)<br>
+{<br>
+scanf(&quot;%d%d&quot;,&amp;v[i],&amp;w[i]);<br>
+}<br>
+for(int i=1;i&lt;=n;i++)<br>
+for(int j = m ; j &gt;= v[i];j--)<br>
+f[j]=max(f[j],f[j-v[i]]+w[i]);<br>
+cout&lt;&lt;f[m];<br>
+return 0;<br>
+}<br>
+2、完全背包<br>
+#include &lt;bits/stdc++.h&gt;<br>
+using namespace std;<br>
+int n,m,f[1002],v[1002],w[1002];<br>
+int main()<br>
+{<br>
+cin&gt;&gt;n&gt;&gt;m;<br>
+for(int i=1;i&lt;=n;i++)<br>
+{<br>
+scanf(&quot;%d%d&quot;,&amp;v[i],&amp;w[i]);<br>
+}<br>
+for(int i=1;i&lt;=n;i++)<br>
+for(int j = v[i]; j &lt;= m;j++)<br>
+f[j]=max(f[j],f[j-v[i]]+w[i]);<br>
+cout&lt;&lt;f[m];<br>
+return 0;<br>
+}</p>
 
               </div>
               <div class="toc-container">
@@ -105,6 +137,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://ozdimensional.github.io/post/gcd/">
+              <h3 class="post-title">
+                数论
+              </h3>
+            </a>
+          </div>
         
 
         
